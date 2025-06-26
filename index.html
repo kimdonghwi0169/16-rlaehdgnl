@@ -8,6 +8,27 @@
     </head>
     <body>
         <header>
+            <script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('palybtn');
+    const pauseBtn = document.getElementById('pausebtn');
+
+    // 재생 버튼 클릭 시
+    playBtn.addEventListener('click', function () {
+      audio.play();
+      playBtn.style.display = 'none';
+      pauseBtn.style.display = 'inline';
+    });
+
+    // 일시정지 버튼 클릭 시
+    pauseBtn.addEventListener('click', function () {
+      audio.pause();
+      pauseBtn.style.display = 'none';
+      playBtn.style.display = 'inline';
+    });
+  });
+</script>
 
             <h1><img src="imges/logo.png" alt=""></h1>
             <nav>
